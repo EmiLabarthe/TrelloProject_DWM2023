@@ -1,0 +1,232 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container{
+    margin:0px;
+    display: inline-block;
+}
+.taskColumn{
+    padding-top: 50px; 
+    padding-bottom: 12px;
+    border: 2px black;
+    border-style:hidden;
+    margin: 5px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    height:min-content;
+    position: relative;
+    
+}
+.myCard{
+    margin: 8px -11px;  
+    padding-left: -3px;
+}
+.myCardBody{
+    margin-left: -5px;
+    margin-top: 0px;
+}
+@media (min-width: 1200px) {
+    .h4, h4 {
+      font-size: 1.1rem;
+      margin: 5px 5px 9px 10px;
+      font-weight: 640;
+      color:rgb(72, 72, 72);
+    }
+}
+.taskColumnTitle{
+    margin-top: -42px;
+    /*border: solid rgb(212, 212, 212);*/
+    border-radius: 10px;
+    padding: 1px 10px 0px 0px;
+    /*background-color: rgb(238, 237, 237);*/
+}
+.no-margin {
+    margin: 0;
+}
+body{
+    background: url(https://wallpaperaccess.com/full/124518.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.myNavbar{
+    height: 55px;
+    background-color: rgba(43, 43, 167, 0.5);
+    margin-bottom: 8px;
+    position: relative;
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.mynav-item{
+    margin: -5px 10px;
+}
+.mynav-item:hover{
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 6px;
+}
+.mynav-link{
+    color: white;
+}
+.navigationBarItem{
+    display: block;
+    padding: 10px 20px;
+    background-color: rgba(43, 43, 167, 0.5);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 3px 5px;
+    border-style:solid;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+
+}
+.navigationBarList{
+    display: flex;
+    padding: 10px 20px;
+    background-color: rgb(25, 90, 175);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.trelloIndex{
+    display: inline-block;
+    padding: 8px 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: larger;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 3px 5px;
+}
+.trelloIndex:hover{
+    color: white;
+}
+.mynavbar{
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+/*
+.addColumnButton{
+    position: absolute;
+    bottom: 40px; 
+    right: 40px; 
+    padding: 10px 25px 14px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size:xx-large;
+}*/
+
+.addColumnButton:hover,
+.navigationBarItem:hover
+{
+    background-color: #0070e8;
+}
+.addCardButton > button{
+    margin-left: 2px;
+    border:none;
+    background: none;
+    color:rgb(72, 72, 72);
+}
+.addCardButton{
+    padding-right: 30px;
+    display:block;
+}
+.addCardButton > button:hover{
+    background-color: rgb(179, 179, 179);
+    border-radius: 7px;
+}
+.columnContainer{
+    margin: 10px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    height: calc(100vh - 65px);
+}
+.addColumnButton{
+    display: block;
+    margin-left: 15px;
+    background-color: rgba(211, 211, 211, 0.4);
+    width: fit-content;
+    padding: 5px 50px 5px 10px;
+    border-radius: 6px;
+    border: none;
+    position: absolute;
+    bottom:10px;
+    right:10px;
+}
+.addColumnButton:hover{
+    background-color: rgba(211, 211, 211, 0.7);
+}
+.mainContainer{
+    margin: 10px;
+}
+.deleteElement{
+    position: absolute;
+    background-color: rgba(0,0,0,0.0);
+    border:none;
+    top: 3px;
+    right: 3px;
+    color: gray
+}
+.deleteElement:hover{
+    color:black;
+}
+.deleteColumn{
+    background-color: white;
+    color: gray;
+    float: right;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border: none;
+    background-color: rgb(235, 235, 235);;
+}
+.cardDeadline{
+    background-color: rgb(205, 204, 204, 0.6);
+    position: absolute;
+    bottom: -11px;
+    right: 8px;
+    border-radius: 6px;
+    padding: 0px 8px;
+}
+.deadlineClock{
+    max-width: 12px;
+    margin-top: -4px;
+    margin-right: 2px;
+}
+.dropZone{
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    border-radius: 7px;
+    background-color: rgb(192, 190, 190, 0.5);
+    margin: 14px -7px;
+}
+.dropZoneImg{
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: 7px;
+}
+.myModalInput{
+    margin-bottom: 3px;
+}
+.burgaColor{
+    color: white;
+    filter: invert(1);
+    opacity: 1;
+}
+.burga{
+    border: white solid 1px;
+}

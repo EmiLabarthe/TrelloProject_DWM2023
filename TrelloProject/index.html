@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script defer src="script.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="../TrelloProject/styles.css" rel="stylesheet" />
+    <title>Trello - board</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/836/PNG/512/Trello_icon-icons.com_66775.png">
+
+  </head>
+  <body>
+
+    <nav class="mynavbar navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="trelloIndex navbar-brand" href="#">Trello</a>
+        <button class="navbar-toggler burga" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon burgaColor"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul  class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mynav-item">
+              <a class="nav-link mynav-link" aria-current="page" href="#">Boards</a>
+            </li>
+            <li class="nav-item mynav-item" >
+              <a class="nav-link mynav-link" href="#">Workspaces</a>
+            </li>
+            <li class="nav-item mynav-item">
+              <a class="nav-link mynav-link" href="#">Create</a>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row no-margin columnContainer" id="columnContainer">
+      <!--COLUMNA-->
+      <!--<div class="taskColumn col-12 col-lg-2 col-md-3 col-sm-4" id="col1">
+        <button class="deleteColumn" onclick="deleteElement('col1')">X</button>
+        <div class="taskColumnTitle" contenteditable="true">
+          <h4>Backlog</h4>
+        </div>
+        <div
+          class="dropZone"
+          ondrop="drop(event, 'cardContainer1')"
+          ondragover="allowDrop(event)"
+        >
+          <p>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/724/724933.png"
+              class="dropZoneImg"
+            />
+            drop here
+          </p>
+        </div>
+        <div id="cardContainer1"></div>
+        <footer class="addCardButton">
+          <button
+            href=""
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#modalCardContent1"
+          >
+            + Add card
+          </button>
+        </footer>
+      </div>
+
+    <div
+      class="modal fade"
+      id="modalCardContent1"
+      tabindex="-1"
+      aria-labelledby="modalCardContentLabel1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCardContentLabel1">
+              Creating new card
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="taskPrompt1">Write your task:</label>
+            <input
+              type="text"
+              id="taskPrompt1"
+              class="form-control myModalInput"
+              value = ""
+            />
+            <label for="deadlinePrompt1">Deadline:</label>
+            <input type="date" id="deadlinePrompt1" name="Deadline" class="form-control myModalInput">
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addCard('cardContainer1')"
+              data-bs-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+
+    <!--COLUMNA
+    <div class="taskColumn col-12 col-lg-2 col-md-3 col-sm-4" id="col2">
+      <button class="deleteColumn" onclick="deleteElement('col2')">X</button>
+      <div class="taskColumnTitle" contenteditable="true">
+        <h4>To do</h4>
+      </div>
+      <div
+        class="dropZone"
+        ondrop="drop(event, 'cardContainer2')"
+        ondragover="allowDrop(event)"
+      >
+        <p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/724/724933.png"
+            class="dropZoneImg"
+          />
+          drop here
+        </p>
+      </div>
+      <div id="cardContainer2">
+        <div
+          class="card myCard"
+          id="card1"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <div class="card-body myCardBody">
+            <button class="deleteElement" onclick="deleteElement('card1')">
+              X
+            </button>
+            <p contenteditable="true" class="card-text">testcard</p>
+          </div>
+        </div>
+      </div>
+      <footer class="addCardButton">
+        <button
+          href=""
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modalCardContent2"
+        >
+          + Add card
+        </button>
+      </footer>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalCardContent2"
+      tabindex="-1"
+      aria-labelledby="modalCardContentLabel2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCardContentLabel2">
+              Creating new card
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="taskPrompt2">Write your task:</label>
+            <input
+              type="text"
+              id="taskPrompt2"
+              class="form-control myModalInput"
+            />
+            <label for="deadlinePrompt2">Deadline:</label>
+            <input type="date" id="deadlinePrompt2" name="Deadline" class="form-control myModalInput">
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addCard('cardContainer2')"
+              data-bs-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+    <!--COLUMNA
+    <div class="taskColumn col-12 col-lg-2 col-md-3 col-sm-4" id="col3">
+      <button class="deleteColumn" onclick="deleteElement('col3')">X</button>
+      <div class="taskColumnTitle" contenteditable="true">
+        <h4>Doing</h4>
+      </div>
+      <div
+        class="dropZone"
+        ondrop="drop(event, 'cardContainer3')"
+        ondragover="allowDrop(event)"
+      >
+        <p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/724/724933.png"
+            class="dropZoneImg"
+          />
+          drop here
+        </p>
+      </div>
+      <div id="cardContainer3"></div>
+      <footer class="addCardButton">
+        <button
+          href=""
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modalCardContent3"
+        >
+          + Add card
+        </button>
+      </footer>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalCardContent3"
+      tabindex="-1"
+      aria-labelledby="modalCardContentLabel3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCardContentLabel3">
+              Creating new card
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="taskPrompt3">Write your task:</label>
+            <input
+              type="text"
+              id="taskPrompt3"
+              class="form-control myModalInput"
+            />
+            <label for="deadlinePrompt3">Deadline:</label>
+            <input type="date" id="deadlinePrompt3" name="Deadline" class="form-control myModalInput">
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addCard('cardContainer3')"
+              data-bs-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+    <!--COLUMNA
+    <div class="taskColumn col-12 col-lg-2 col-md-3 col-sm-4" id="col4">
+      <button class="deleteColumn" onclick="deleteElement('col4')">X</button>
+      <div class="taskColumnTitle" contenteditable="true">
+        <h4>Done</h4>
+      </div>
+      <div
+        class="dropZone"
+        ondrop="drop(event, 'cardContainer4')"
+        ondragover="allowDrop(event)"
+      >
+        <p>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/724/724933.png"
+            class="dropZoneImg"
+          />
+          drop here
+        </p>
+      </div>
+      <div id="cardContainer4"></div>
+      <footer class="addCardButton">
+        <button
+          href=""
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modalCardContent4"
+        >
+          + Add card
+        </button>
+      </footer>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalCardContent4"
+      tabindex="-1"
+      aria-labelledby="modalCardContentLabel4"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCardContentLabel4">
+              Creating new card
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <label for="taskPrompt4">Write your task:</label>
+            <input
+              type="text"
+              id="taskPrompt4"
+              class="form-control myModalInput"
+            />
+            <label for="deadlinePrompt4">Deadline:</label>
+            <input type="date" id="deadlinePrompt4" name="Deadline" class="form-control myModalInput">
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="addCard('cardContainer4')"
+              data-bs-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    
+
+    -->
+  </div>
+    <!--AGREGAR COLUMNA-->
+    <button class="addColumnButton"
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#modalColumn">+ Add column
+      </button>
+
+    <div
+    class="modal fade"
+    id="modalColumn"
+    tabindex="-1"
+    aria-labelledby="modalColumn"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalColumn">
+            Creating column
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <label for="titlePrompt">Write your title:</label>
+          <input
+            type="text"
+            id="titlePrompt"
+            class="form-control myModalInput"
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="addColumn()"
+            data-bs-dismiss="modal"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  </body>
+</html>
